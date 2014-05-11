@@ -6,18 +6,16 @@
 
 int tests_run = 0;
 
-char* testReadFile() {
-	char paths[] = {"src/tests/test-file-1.txt"};
-	char* path;
-	path = &paths[0];
+char* testReadFile(char* path, char expected[]) {
 	char* str = readFile(path);
 	str = slice(str, 0, strlen(str) - 1);
-	mu_assert("error", strcmp(str, "spam") == 0);
+	mu_assert("error", strcmp(str, expected) == 0);
 	return 0;
 }
 
 static char* all_tests() {
-	mu_run_test(testReadFile);
+	mu_run_test(testReadFile, "src/tests/test-file-1.txt", "spam");
+	mu_run_test(testReadFile, "src/tests/test-file-2.txt", "eggs");
 	return 0;
 }
 

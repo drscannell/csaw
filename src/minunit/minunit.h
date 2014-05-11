@@ -6,8 +6,8 @@
 	} \
 } while (0)
 
-#define mu_run_test(test) do { \
-	char *message = test(); \
+#define mu_run_test(test, input, expected) do { \
+	char *message = test(input, expected); \
 	tests_run++; \
 	if (message) { \
 		return message; \
