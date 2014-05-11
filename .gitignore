@@ -1,0 +1,23 @@
+# C/Java
+build/
+dist/
+
+# Netbeans
+nbproject/private/
+
+# Vim
+*~
+*.swp
+*.swo
+
+# OSX
+.DS_Store
+
+# node
+node_modules
+
+# CoffeeScript
+lib/*.js
+
+# Python
+*.pyc
