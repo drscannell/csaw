@@ -1,10 +1,12 @@
-all: compile
 
-compile:
+displayfile:
 	mkdir -p build
-	gcc -o build/main -ansi src/*.c
+	gcc -o build/displayfile -ansi src/helper/*.c src/argtests/*.c
+	build/displayfile src/tests/test-file-1.txt src/tests/test-file-2.txt
 
-test: compile
-	build/main
+test:
+	mkdir -p build
+	gcc -o build/test -ansi src/helper/*.c src/tests/*.c
+	build/test
 
 
