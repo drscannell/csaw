@@ -4,7 +4,7 @@
 #include "helper.h"
 
 void testReadFile() {
-	char path[] = "test-files/test-file-1.txt";
+	char path[] = "src/tests/test-file-1.txt";
 	char* str = readFile(path);
 	str = slice(str, 0, strlen(str) - 1);
 	assert(strcmp(str, "spam") == 0);
