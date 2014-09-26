@@ -24,8 +24,7 @@ int main(int argc, char **argv) {
 	char *result = all_tests();
 	if (result != 0) {
 		printf("%s\n", result);
-	}
-	else {
+	} else {
 		printf("ALL TESTS PASSED\n");
 	}
 	printf("Tests run: %d\n\n", tests_run);
